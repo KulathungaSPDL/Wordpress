@@ -8,12 +8,13 @@
             <div class="col-lg-12 col-sm-12">
               <div class="main-text-area">
                   <?php
-                    if (have_posts()) {
-                      while (have_posts()) {
-                        the_post();
-                        the_content();
-                      }
-                    }
+                    if ( have_posts() ) : 
+                      while ( have_posts() ) : the_post();
+                          the_content();
+                      endwhile;
+                    else :
+                        _e( 'Sorry, no posts matched your criteria.', 'firstcustomtheme' );
+                    endif;             
                   ?>
                   <br><br><br>
                 <button class="btn btn-danger">FIND OUT MORE</button>
@@ -25,7 +26,6 @@
     <!-- main banner end -->
 </div>
     <div class="main">
-
       <!-- feature start -->
       <section id="feature">
         <div class="feature-height"></div>

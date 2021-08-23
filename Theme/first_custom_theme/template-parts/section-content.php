@@ -13,7 +13,9 @@
                 <div class="card">               
                      <img src="<?php the_post_thumbnail_url() ?>" class="singlePageThumbnail" alt="responsive thumbnail">                 
                 </div>
-                <?php } else {} ?>
+                <?php } else {
+                    // nothing show here
+                } ?>
             </div>
             <div class="col-lx-12 col-lg-12 col-sm-12 col-sx-12">
                 <br><br>    

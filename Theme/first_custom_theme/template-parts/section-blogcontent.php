@@ -10,11 +10,15 @@
                 <p><?php echo get_the_date('l jS F, Y'); ?></p>
                 <br>
             </div>
+            <?php if ( has_post_thumbnail() ) {  ?>
             <div class="col-lx-12 col-lg-12 col-md-12 col-sm-12">
                 <!-- get thimbnail image -->
                 <img src="<?php the_post_thumbnail_url(); ?>" class=" blogImg image-fluid" alt="">        
                 <br>
             </div>
+            <?php } else {
+                // nothoing show here
+            } ?>
             <div class="col-lx-12 col-lg-12 col-md-12 col-sm-12">
                 <br>
                 <?php the_content() ?>
